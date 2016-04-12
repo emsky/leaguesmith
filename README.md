@@ -1,7 +1,5 @@
 # LeagueSmith
 
-Preview: http://leemunroe.github.io/motherplate/example.html
-
 ## What is this?
 A simple Champion Masteries and Runes calculator for planning strategies in League of Legends.
 
