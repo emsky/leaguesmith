@@ -1,0 +1,44 @@
+//**
+// Navigation
+//**
+
+nav {
+  a {
+    display: block;
+  }
+}
+/**
+ * Top Navigation
+ */
+.nav__buttons {
+  right: -40px;
+  position: relative;
+  margin: 0;
+}
+.nav__buttons ul {
+  display: inline;
+  padding: 0;
+
+}
+.nav__buttons__item {
+  display: table-cell;
+  float: right;
+  padding: 0 1em;
+  height: 4em;
+  line-height:4em;
+  border-left: 2px solid #000;
+  border-right: 2px solid #111;
+
+}
+
+.nav__buttons__item a {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $teal-light;
+  position: relative;
+  transition: all 0.1s linear;
+}
+.nav__buttons__item a:hover {
+  color: $gold-mid;
+  text-shadow: 0 0 6px $gold-pale;
+}

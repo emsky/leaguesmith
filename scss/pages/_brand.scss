@@ -1,0 +1,123 @@
+//**
+// Any brand-specific styles and mixins
+//**
+
+html, body {
+  background-image: url("/img/backdrop.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: black;
+  color: $gold-mid;
+}
+.overlay-frame {
+  height: 76px;
+  width: 76px;
+  display: block;
+  background-size: 76px 76px;
+  background-repeat: no-repeat;
+}
+/**
+ * Brand-specific reusable mixins
+ */
+.nautical {
+  border: 1px solid $teal-dark;
+  background-color: rgba(12, 33, 36, 0.3);
+}
+.border-golden {
+  border: 1px solid transparent;
+  border-image: linear-gradient($gold-dark, $gold-mid, $gold-pale, white ,$gold-mid) 14% stretch;
+}
+
+[class^="frame-"]{
+  display: inline-block;
+  height: 76px;
+  width: 76px;
+  background-image: url("/img/frames.png");
+  background-size: auto;
+  position: absolute;
+  z-index: 999;
+}
+[class^="frame-"][class$="-left"]{
+  top: 0;
+  left: 0;
+}
+[class^="frame-"][class$="-right"]{
+  top: 0;
+  right: 0;
+}
+[class^="frame-"][class$="-center"]{
+  top: 0;
+  left: 0;
+}
+[class^="frame-normal"],
+[class^="frame-tier2"],
+[class^="frame-tier4"],
+[class^="frame-tier6"] {
+  background-position: 0 0;
+}
+.on {
+  [class^="frame-normal"] {
+    background-position: -76px 0;
+  }
+  [class^="frame-tier2"] {
+    background-position: -152px 0;
+  }
+  [class^="frame-tier4f"] {
+    background-position: 0 -76px;
+  }
+  [class^="frame-tier6f"] {
+    background-position: 0 -152px;
+  }
+  [class^="frame-tier4c"] {
+    background-position: -76px -76px;
+  }
+  [class^="frame-tier6c"] {
+    background-position: -76px -152px;
+  }
+  [class^="frame-tier4r"] {
+    background-position: -152px -76px;
+  }
+  [class^="frame-tier6r"] {
+    background-position: -152px -152px;
+  }
+}
+
+/**
+ * Custom Buttons
+ */
+.btn-redo,
+.btn-get {
+  @extend .border-golden;
+ font-family: $serif;
+ font-weight: 700;
+ text-shadow: 1px 1px 3px #000;
+ padding-left: 1.5em;
+ padding-right: 1.5em;
+ transition: background-color 1s linear;
+}
+.btn-redo {
+  background: linear-gradient(to bottom, $teal-dark, $forest);
+  color: $gold-pale;
+}
+.btn-redo:hover {
+  background: linear-gradient(to bottom, lighten($teal-dark, 5%), $forest);
+}
+.btn-get {
+  background: linear-gradient(to bottom, $red, $orange, $orange-light);
+  color: $gold-pale;
+}
+.btn-get:hover {
+  background: linear-gradient(to bottom, lighten($red, 10%), lighten($orange, 10%), $orange-light);
+}
+
+// Responsive styles if needed
+// @include responsive($big-break) {
+// }
+// @include responsive($small-break) {
+// }
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }

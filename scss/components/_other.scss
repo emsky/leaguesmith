@@ -1,0 +1,114 @@
+//**
+// Other Useful Reusable Styles
+//**
+
+* {
+  box-sizing: border-box !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.list-unstyled {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.valign {
+  vertical-align: middle;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  margin: $padding 0;
+}
+
+.subtle {
+  color: $subtle-color;
+}
+
+.relative {
+  position: relative;
+}
+
+/**
+ * Positioning
+ */
+
+.flush-left {
+   float: left;
+ }
+.flush-right {
+   float: right;
+ }
+.center-vertical {
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+ }
+.center-horizontal {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/**
+ * Cursors
+ */
+
+.auto { cursor: auto; }
+.default { cursor: default; }
+.none { cursor: none; }
+.context-menu { cursor: context-menu; }
+.help { cursor: help; }
+.pointer { cursor: pointer; }
+.progress { cursor: progress; }
+.wait { cursor: wait; }
+.cell { cursor: cell; }
+.crosshair { cursor: crosshair; }
+.text { cursor: text; }
+.vertical-text { cursor: vertical-text; }
+.alias { cursor: alias; }
+.copy { cursor: copy; }
+.move { cursor: move; }
+.no-drop { cursor: no-drop; }
+.not-allowed { cursor: not-allowed; }
+.all-scroll { cursor: all-scroll; }
+.col-resize { cursor: col-resize; }
+.row-resize { cursor: row-resize; }
+.n-resize { cursor: n-resize; }
+.e-resize { cursor: e-resize; }
+.s-resize { cursor: s-resize; }
+.w-resize { cursor: w-resize; }
+.ns-resize { cursor: ns-resize; }
+.ew-resize { cursor: ew-resize; }
+.ne-resize { cursor: ne-resize; }
+.nw-resize { cursor: nw-resize; }
+.se-resize { cursor: se-resize; }
+.sw-resize { cursor: sw-resize; }
+.nesw-resize { cursor: nesw-resize; }
+.nwse-resize { cursor: nwse-resize; }

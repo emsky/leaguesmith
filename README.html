@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="motherplate:aresponsivescssboilerplateforwebdesigners">Motherplate: A Responsive SCSS Boilerplate for Web Designers</h1>
+
+<p>Preview: http://leemunroe.github.io/motherplate/example.html</p>
+
+<h2 id="whatisthis">What is this?</h2>
+
+<p>This is a bare bones HTML/CSS framework. This is what I&#8217;ll typically start off most web projects with.</p>
+
+<p>It includes a CSS reset and a bunch of minimal boilerplate styles that should come in useful for any project, including a responsive grid, typography, buttons, icons and forms.</p>
+
+<p>It is not as in depth as something like <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> and doesn&#8217;t include styled components like <a href="http://twitter.github.io/bootstrap/">Bootstrap</a>.</p>
+
+<p>It can be used for a static web project as is, or you can copy the CSS folder into an existing framework (e.g. Rails).</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+<li>Uses SCSS partials to help structure the CSS.</li>
+<li>Responsive-ready 12-column grid system to work across all devices.</li>
+<li>Uses Font Awesome icon fonts for icons.</li>
+<li>Uses Normalize to reset browser styles.</li>
+<li>Only enough CSS to get you started; minimal visual styling with this boilerplate.</li>
+<li>Only the HTML/JS you need to get started; very little components with this boilerplate.</li>
+</ul>
+
+<h2 id="howtouse">How to Use</h2>
+
+<p>This will vary depending on the framework you are using. The following is how to for a basic static website.</p>
+
+<h3 id="installnode.jsandusegrunt">Install Node.js and use Grunt</h3>
+
+<p>Motherplate uses SCSS. This particular repo uses <a href="http://gruntjs.com/">Grunt</a> to compile the SCSS to CSS.</p>
+
+<p>You will need <a href="https://nodejs.org/download/">Node.js</a>. </p>
+
+<p>Open up terminal (or command line) and run the default Grunt task.
+<code>
+$ npm install
+$ grunt
+</code></p>
+
+<p>Grunt will watch for any changes you make to your SCSS files and compile your new <code>main.css</code> file.</p>
+
+<h2 id="html">HTML</h2>
+
+<p>A bare bones index.html template.</p>
+
+<h2 id="css">CSS</h2>
+
+<ul>
+<li><code>lib/normalize</code> This is Normalize, a CSS reset.</li>
+<li><code>lib/icons</code> This is Font Awesome&#8217;s CSS stylesheet. Plug and play icons.</li>
+<li><code>base/config</code> Put all your variables in here e.g. colors, padding, border radius - this helps with consistency across your project.</li>
+<li><code>base/grid</code> A basic responsive grid system with 12 columns.</li>
+<li><code>base/ie</code> Any styles that you need to add in order for Internet Explorer to work.</li>
+<li><code>base/mixins</code> Reusabled Sass mixins e.g. clearfix.</li>
+<li><code>base/print</code> Basic print stylesheets to make your pages look better when printed.</li>
+<li><code>base/responsive</code> Add any global responsive styles here e.g. hide elements, show elements, resize elements.</li>
+<li><code>base/shame</code> Keep this to hand for any quick and dirty CSS you need to add but plan to tidy later.</li>
+<li><code>base/type</code> Basic styling for your typography.</li>
+<li><code>components/alerts</code> Alerts to notify or give feedback to the user</li>
+<li><code>components/buttons</code> Styles for any text links and/or buttons.</li>
+<li><code>components/forms</code> Some basic form styles.</li>
+<li><code>components/media</code> Styles for images, video etc.</li>
+<li><code>components/nav</code> Inline navigation.</li>
+<li><code>components/other</code> Other reusable styles that come in handy.</li>
+<li><code>components/tables</code> Styles for tables.</li>
+<li><code>pages/home</code> Styles that are specific to the homepage</li>
+<li><code>pages/layout</code> Global layout styles e.g. header, footer, logo etc.</li>
+<li><code>main.scss</code> This brings all the partials together. Compass only compiles files that don&#8217;t have an underscore</li>
+</ul>
+
+<p>As your project grows and you need to add more styles just create new .scss files and reference them anywhere in your main.scss file.</p>
+
+<h2 id="javascript">JavaScript</h2>
+
+<ul>
+<li>I&#8217;ve included some basic Javascript including the latest jQuery and the document ready function.</li>
+</ul>
+
+<h2 id="images">Images</h2>
+
+<ul>
+<li>There is a /img folder for images.</li>
+<li>For images referenced in the CSS I tend to keep them in the css/assets/ folder e.g. sp.png is a sprite I can reference.</li>
+<li>Images referenced in the HTML are stored in the /img folder.</li>
+</ul>
+
+<h2 id="fonts">Fonts</h2>
+
+<ul>
+<li>Included font awesome for icons</li>
+</ul>
+
+<h2 id="furtherdocumentation">Further Documentation</h2>
+
+<ul>
+<li><a href="http://compass-style.org/">Compass Framework</a></li>
+<li><a href="http://sass-lang.com/">SASS</a></li>
+<li><a href="http://necolas.github.com/normalize.css/">normalize.css</a></li>
+<li><a href="http://fontawesome.io/">Font Awesome</a></li>
+</ul>
+
+</body>
+</html>

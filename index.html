@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title></title> 
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="txt/javascript" src="js/min/main.min.js"></script>
+	<script type="txt/javascript" src="js/min/controllers.min.js"></script>
+
+	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+</head>
+<body>
+
+	<header role="banner">
+		<div class="container">
+			<div class="group">
+				<div class="title span8">
+					<img src="img/lol-logo.png" alt="">
+					<h1>League Crafter</h1>
+				</div>
+				<nav class="span4 nav__buttons" role="navigation">
+					<ul>
+						<li class="nav__buttons__item"><a href="">About</a></li>
+					</ul>
+				</nav>
+			</div>
+
+		</div>
+	</header>
+	<main role="main">
+		<div class="smr container">
+				<div class="instructions">
+					<p>A simple Masteries and Runes calculator for planning strategies in League of Legends.</p>
+						<p>To use the Mastery calculator, just click the item to which you'd like to add points. Right-click on it to remove points. Or be a ninja and scroll.</p>
+						<p>To use the Rune calculator, simply drag a rune from your rune collection to an appropriate slot, or click the rune itself. Right-click a rune on the rune page to remove it and place it back to your rune pool.</p>
+				</div>
+
+
+				<div class="clearfix"></div>
+				<div class="group">
+						<div class="stats nautical span3">
+						<!--Champion Summary-->
+						<div class="champion-info">
+							<div class="champion-portrait">
+								<img src="http://ddragon.leagueoflegends.com/cdn/6.7.1/img/champion/TwistedFate.png" alt="">
+								<div class="clearfix"></div>
+							</div>
+
+							<div class="champion-stats">
+								<h3>Twisted Fate</h3>
+								<div class="champion-masteries">
+										<ul class="mastery-icons">
+											<li>
+												<span class="icon-wrap"><span class="icon-mastery icon-mastery-ferocity"></span></span>
+												<span class="icon-wrap"><span class="count-ferocity">18</span></span>
+											</li>
+											<li>
+												<span class="icon-wrap"><span class="icon-mastery icon-mastery-cunning"></span></span>
+												<span class="icon-wrap"><span class="count-cunning">18</span></span>
+												</li>
+											<li>
+												<span class="icon-wrap"><span class="icon-mastery icon-mastery-resolve"></span></span>
+												<span class="icon-wrap"><span class="count-resolve">18</span></span>
+											</li>
+										</ul>
+								</div>
+
+
+
+							</div>
+							<div class="clearfix"></div>
+							<div class="combat-stats">
+								<hr>
+								<!--Champion Stats: Offensive-->
+								<h4>Offensive</h4>
+								<dl>
+									<dt>Armor Penetration</dt>
+									<dd>01</dd>
+									<dt>Attack Damage</dt>
+									<dd>02</dd>
+									<dt>Attack Speed</dt>
+									<dd>03</dd>
+									<dt>Critical Strike Chance</dt>
+									<dd>04</dd>
+									<dt>Critical Strike Damage</dt>
+									<dd>05</dd>
+									<dt>Lifesteal</dt>
+									<dd>06</dd>
+								</dl>
+								<hr>
+								<!--Champion Stats: Defensive-->
+								<h4>Defensive</h4>
+								<dl>
+									<dt>Armor </dt>
+									<dd>07</dd>
+									<dt>Health Points</dt>
+									<dd>08</dd>
+									<dt>Health Regeneration</dt>
+									<dd>09</dd>
+									<dt>Magic Resistance</dt>
+									<dd>10</dd>
+								</dl>
+								<hr>
+								<!--Champion Stats: Abilities-->
+								<h4>Abilities</h4>
+								<dl>
+									<dt>Ability Power</dt>
+									<dd>11</dd>
+									<dt>Cooldown Reduction</dt>
+									<dd>12</dd>
+									<dt>Magic Penetration</dt>
+									<dd>13</dd>
+									<dt>Mana</dt>
+									<dd>14</dd>
+									<dt>Mana Regeneration</dt>
+									<dd>15</dd>
+									<dt>Spell Vamp</dt>
+									<dd>16</dd>
+								</dl>
+								<hr>
+								<!--Champion Stats: Movement-->
+								<h4>Movement</h4>
+								<dl>
+									<dt>Movement Speed</dt>
+									<dd>17</dd>
+									<dt></dt>
+									<dd></dd>
+								</dl>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+
+
+
+						</div>
+
+						<div class="masteries-runes span9">
+							<nav class="group">
+								<ul class="tabs span6">
+									<li class="tab"><a class="active tab-link tab-nautical">Masteries</a></li>
+									<li class="tab"><a class="tab-link tab-nautical">Runes</a></li>
+									<li class="tab"><a class="tab-link tab-nautical">Other Stats</a></li>
+								</ul>
+								<!-- Actions -->
+								<ul class="actions span6">
+									<li><button class="btn btn-sm btn-get">Copy URL</button></li>
+									<li><button class="btn btn-sm btn-redo">Start over</button></li>
+								</ul>
+							</nav>
+
+							<!-- Masteries -->
+							<div class="masteries">
+									<div class="group">
+										  <!-- FEROCITY TREE -->
+											<div class="tree ferocity span4">
+													<div class="group">
+															<div class="tier1 span6">
+																<a class="micon-fury flush-left">
+																  <span class="frame-normal-left">
+																		<span class="mcounter"><span class="mcount">0</span>/5</span>
+																  </span>
+																</a>
+															</div>
+															<div class="tier1 span6">
+																<a class="micon-sorcery flush-right">
+																	<span class="frame-normal-right">
+																			<span class="mcounter"><span class="mcount">0</span>/5</span>
+																	</span>
+																</a>
+															</div>
+													</div>
+													<div class="group">
+														<div class="tier2 span6">
+															<a class="micon-doubleedgedsword flush-right">
+																	<span class="frame-tier2-right"></span>
+															</a>
+														</div>
+														<div class="tier2 span6">
+															<a class="micon-feast flush-left">
+																	<span class="frame-tier2-left"></span>
+															</a>
+														</div>
+													</div>
+													<div class="group">
+														<div class="tier3 span6">
+															<a class="micon-vampirism flush-left">
+																	<span class="frame-normal-left">
+																		<span class="mcounter"><span class="mcount">0</span>/5</span>
+																	</span>
+															</a>
+														</div>
+													  	<div class="tier3 span6">
+															<a class="micon-naturaltalent flush-right">
+																<span class="frame-normal-right">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+																</span>
+															</a>
+														</div>
+													</div>
+													<div class="group">
+														<div class="tier4 span6">
+															<a class="micon-bountyhunter flush-right">
+																<span class="frame-tier4f-right"></span>
+															</a>
+														</div>
+														<div class="tier4 span6">
+															<a class="micon-oppressor flush-left">
+																<span class="frame-tier4f-left"></span>
+															</a>
+														</div>
+													</div>
+													<div class="group">
+														<div class="tier5 span6">
+															<a class="micon-batteringblows flush-left">
+																<span class="frame-normal-left">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+														<div class="tier5 span6">
+															<a class="micon-piercingthoughts flush-right">
+																<span class="frame-normal-right">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+													</div>
+													<div class="group">
+														<div class="tier6 span4">
+															<a class="micon-warlordsbloodlust flush-left">
+																<span class="frame-tier6f-left"></span>
+															</a>
+														</div>
+														<div class="tier6 span4">
+															<a class="micon-fervorofbattle">
+																<span class="frame-tier6f-center"></span>
+															</a>
+														</div>
+														<div class="tier6 span4">
+															<a class="micon-deathfiretouch flush-right">
+																<span class="frame-tier6f-right"></span>
+															</a>
+														</div>
+													</div>
+											</div>
+
+											<!-- CUNNING TREE -->
+											<div class="tree cunning span4">
+												<div class="group">
+														<div class="tier1 span6">
+															<a class="micon-wanderer flush-left">
+																<span class="frame-normal-left">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+														<div class="tier1 span6">
+															<a class="micon-savagery flush-right">
+																<span class="frame-normal-right">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+												</div>
+												<div class="group">
+														<div class="tier6 span4">
+															<a class="micon-runicaffinity flush-left">
+																	<span class="frame-tier2-left"></span>
+															</a>
+														</div>
+														<div class="tier6 span4">
+															<a class="micon-assassin">
+																<span class="frame-tier2-center"></span>
+															</a>
+														</div>
+														<div class="tier6 span4">
+															<a class="micon-secretstash flush-right">
+																<span class="frame-tier2-right"></span>
+															</a>
+														</div>
+												</div>
+												<div class="group">
+														<div class="tier3 span6">
+															<a class="micon-merciless flush-left">
+																<span class="frame-normal-left">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+														<div class="tier3 span6">
+															<a class="micon-meditation flush-right">
+																<span class="frame-normal-right">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+												</div>
+												<div class="group">
+														<div class="tier4 span6">
+															<a class="micon-bandit flush-right">
+																<span class="frame-tier4c-right"></span>
+															</a>
+														</div>
+														<div class="tier4 span6">
+															<a class="micon-dangerousgame flush-left">
+																<span class="frame-tier4c-left"></span>
+															</a>
+														</div>
+												</div>
+												<div class="group">
+														<div class="tier5 span6">
+															<a class="micon-precision flush-left">
+																<span class="frame-normal-left">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+														<div class="tier5 span6">
+															<a class="micon-intelligence flush-right">
+																<span class="frame-normal-right">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+												</div>
+												<div class="group">
+														<div class="tier6 span4">
+															<a class="micon-stormragerssurge flush-left">
+																<span class="frame-tier6c-left"></span>
+															</a>
+														</div>
+														<div class="tier6 span4">
+															<a class="micon-thunderlordsdecree">
+																<span class="frame-tier6c-center"></span>
+															</a>
+														</div>
+														<div class="tier6 span4">
+															<a class="micon-windspeakersblessing flush-right">
+																<span class="frame-tier6c-right"></span>
+															</a>
+														</div>
+												</div>
+											</div>
+
+											<!-- RESOLVE TREE -->
+											<div class="tree resolve span4">
+												<div class="group">
+														<div class="tier1 span6">
+															<a class="micon-recovery flush-left">
+																<span class="frame-normal-left">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+														<div class="tier1 span6">
+															<a class="micon-unyielding flush-right">
+																<span class="frame-normal-right">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+												</div>
+												<div class="group">
+														<div class="tier2 span6">
+															<a class="micon-explorer flush-right">
+																<span class="frame-tier2-right"></span>
+															</a>
+														</div>
+														<div class="tier2 span6">
+															<a class="micon-toughskin flush-left">
+																<span class="frame-tier2-left"></span>
+															</a>
+														</div>
+												</div>
+												<div class="group">
+														<div class="tier3 span6">
+															<a class="micon-runicarmor flush-left">
+																<span class="frame-normal-left">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+														<div class="tier3 span6">
+															<a class="micon-veteransscars flush-right">
+																<span class="frame-normal-right">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+												</div>
+												<div class="group">
+														<div class="tier4 span6">
+															<a class="micon-insight flush-right">
+																<span class="frame-tier4r-right"></span>
+															</a>
+														</div>
+														<div class="tier4 span6">
+															<a class="micon-perseverance flush-left">
+																<span class="frame-tier4r-left"></span>
+															</a>
+														</div>
+												</div>
+												<div class="group">
+														<div class="tier5 span6">
+															<a class="micon-swiftness flush-left">
+																<span class="frame-normal-left">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+														<div class="tier5 span6">
+															<a class="micon-legendaryguardian flush-right">
+																<span class="frame-normal-right">
+																	<span class="mcounter"><span class="mcount">0</span>/5</span>
+															</span>
+															</a>
+														</div>
+												</div>
+													<div class="group">
+												<div class="tier6 span4">
+													<a class="micon-graspoftheundying flush-left">
+														<span class="frame-tier6r-left"></span>
+													</a>
+												</div>
+												<div class="tier6 span4">
+													<a class="micon-strengthoftheages">
+														<span class="frame-tier6r-center">	</span>
+													</a>
+												</div>
+												<div class="tier6 span4">
+													<a class="micon-bondofstone flush-right">
+														<span class="frame-tier6r-right"></span>
+													</a>
+												</div>
+											</div>
+											</div>
+									</div>
+							</div>
+
+							<!-- Runes -->
+
+							<!-- Other Stats -->
+
+						</div>
+				</div>
+
+				<div class="abilities">
+					<h3>ABILITIES</h3>
+					<div class="group">
+						<div class="skills-active span3">Champion Skill 1</div>
+						<div class="skills-active span3">Champion Skill 2</div>
+						<div class="skills-active span3">Champion Skill 3</div>
+						<div class="skills-active span3">Champion Skill 4</div>
+					</div>
+					<div class="group">
+						<div class="skills-passive span4 offset4">Champion Passive</div>
+					</div>
+				</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container"></div>
+	</footer>
+
+	<script src="js/lib/jquery-1.10.1.min.js"></script>
+	<script src="js/lib/angular-min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
