@@ -3,15 +3,18 @@
 //**
 
 
+
 /**
  * Header
  */
 header {
   background: black;
   padding: 0;
-  box-shadow: 1px 3px 6px rgba(0,0,0,0.5);
-  background: linear-gradient(#111,#000);
-  border-bottom: 1px solid #111;
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.4);
+  background: linear-gradient(#222,#111,#111, #000);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
 }
 .title {
   margin: 0;
@@ -23,6 +26,7 @@ header {
   width: 13%;
   height: auto;
   display: inline-block;
+  margin-left: 20px;
 }
 .title h1 {
   font-size: 1.5em;
@@ -33,6 +37,23 @@ header {
   background: -webkit-linear-gradient($gold-dark, $gold-mid, $gold-pale);
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
+}
+.title sup {
+  font-family: $serif;
+  font-size: 0.7em;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: $gold-dark;
+  vertical-align: super;
+  margin-left: 1.5em;
+}
+.title sup a {
+  color: $gold-dark;
+  text-decoration: none;
+  transition: all 0.25s linear;
+}
+.title sup a:hover {
+  color: $gold-mid;
 }
 .title h1:before  {
   content: attr(title);
@@ -51,8 +72,114 @@ header {
 /**
  * Instructions
  */
+
+@keyframes expand {
+  0%      { opacity: 1; min-height: 0; width: 0;}
+  10%     { width: 100%; height: 0; min-height: 0; }
+  50%     { min-height: 208px; width: 100%; opacity: 1; }
+  100%    { min-height: 208px; width: 100%; opacity: 1; }
+}
+@keyframes compress {
+  0%      { min-height: 208px; width: 100%; opacity: 1; }
+  25%     { width: 100%; opacity: 1; }
+  50%     { width: 100%; min-height: 0;}
+  75%     { width: 100%; opacity: 1; height: 0; }
+  99%    { opacity: 1; width: 0; min-height: 0; }
+  100%    { opacity: 0; width: 0; min-height: 0; }
+
+}
+@keyframes flicker-in {
+  0%      { top: 0; }
+  5%      { top: 0; opacity: 1; }
+  7%      { top: 0; opacity: 0; }
+  9%      { top: 0; opacity: 1; }
+  13%     { top: 0; opacity: 0; }
+  30%     { top: 0; opacity: 1; }
+  100%    { top: 0; opacity: 1; }
+}
+@keyframes flicker-out {
+  0%      { top: 0; opacity: 0; }
+  5%      { top: 0; opacity: 1; }
+  7%      { top: 0; opacity: 0; }
+  9%      { top: 0; opacity: 1; }
+  13%     { top: 0; opacity: 0; }
+  30%     { top: -258px; opacity: 0; }
+  100%    { top: -258px; opacity: 0; }
+}
 .instructions {
-  margin: 2em 0;
+  transition: all 0.5s linear;
+  border: 1px solid $teal-light;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: relative;
+  background-color: $forest;
+  display: block;
+  box-shadow: 0 1px 10px black, inset 0 -1px 50px $teal-light;
+}
+.instructions p {
+  opacity: 0;
+  position: relative;
+  top: -258px;
+  margin-bottom: 1.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.instructions.cloaked {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.instructions.show {
+  animation-name: expand;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  border-color: $forest;
+  box-shadow: 0 1px 50px black;
+}
+
+.instructions.show p {
+  animation-name: flicker-in;
+  animation-duration: 0.75s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.75s;
+}
+.instructions.show p:first-child {
+  margin-top: 1.8em;
+}
+.instructions.hide{
+  animation-name: compress;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+}
+.instructions.hide p {
+    animation-name: flicker-out;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+}
+.instructions.hide p:first-child {
+  margin-top: 1.8em;
+};
+
+/**
+ * Calculator main
+ */
+.smr {
+  position: relative;
+  overlay: hidden;
+  z-index: 0;
+  transition: all 0.5s ease;
+
+}
+.calculator {
+   transition: all 1s linear;
+   margin-top: 2em;
 }
 /**
  * Actions
@@ -261,24 +388,47 @@ $icon-mastery-width: 35px;
   margin-left: 0;
 }
 .masteries {
-  height: 1;
-  padding: 1em;
+  padding: 0;
+  padding-left: 17px;
+  padding-top: 1em;
   border: 1px solid $teal-dark;
   height: 100%;
   flex: 1;
 }
-.masteries .tree {
-  background: $forest;
+.masteries .tree  {
   padding: 1em;
+  margin-left: 0;
+  margin-top: 1.66667%;
+  max-width: 32.33333%;
+  flex-basis: 32.33333%;
+  box-sizing: border-box;
+  background-size: contain;
+  height: 100%;
+  border-top: 1px solid $teal-dark;
+  border-bottom: 1px solid $teal-dark;
+  border-right: 1px solid $teal-dark;
+}
+.masteries .tree .tree-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.6em;
+  color: $gold-dark;
+  text-shadow: 0 5px 3px black, 0 -1px 0 $gold-mid;
+  margin-bottom: 0.5em;
+
+}
+.masteries .tree:first-child {
+  border-left: 1px solid $teal-dark;
+  margin-left: 1.66667%;
 }
 .masteries .ferocity {
-  /* #TODO: custom ferocity background */
+  background-image: url("/img/bg-keystone-ferocity.png")
 }
 .masteries .cunning {
-  /* #TODO: custom cunning background */
+  background-image: url("/img/bg-keystone-cunning.png")
 }
 .masteries .resolve {
-  /* #TODO: custom resolve background */
+  background-image: url("/img/bg-keystone-resolve.png")
 }
 .masteries>[class^="tier"] {
   display: table;
@@ -309,6 +459,15 @@ $icon-mastery-width: 35px;
    padding: 9px;
 
    display: block;
+
+}
+[class^="micon"][class~="unlocked"]::after {
+  -webkit-filter: grayscale(70%) brightness(100%);
+   -moz-filter: grayscale(70%) brightness(100%);
+   -o-filter: grayscale(70%) brightness(100%);
+   -ms-filter: grayscale(70%) brightness(100%);
+   filter: grayscale(70%) brightness(100%);
+   z-index: -1999999;
 
 }
 [class^="micon"][class~="on"]::after {
