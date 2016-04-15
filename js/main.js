@@ -12,7 +12,7 @@ myApp = {
     // get current mastery tree
     var tree = b.parentsUntil(".tree");
     for (var i = 0; i < tree.length; i++) {
-      console.log(tree[0].className);
+      // test
     }
     // mastery count
     var ctr1 = b.find('.mcount');
@@ -28,10 +28,17 @@ myApp = {
 
 $(document).ready(function(){
 
+  // SHOW/HIDE Instructions
+  $("nav__buttons__item a").click(function(){
+    $(".instructions").slideToggle("slow");
+    console.log("test");
+  });
+
   // MASTERY ICON: LEFT CLICK
   $("[class^='micon']").click(function(){
     var icon = $(this);
     myApp.updateTier(icon);
+    console.log("test");
 
     // Decrement parent class siblings
     // Increment this

@@ -8,7 +8,7 @@ $serif: "Quattrocento", Georgia, Times, "Times New Roman", serif;
 $sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 // Consistent settings
-$br: 3px; // Border-radius
+$br: 5px; // Border-radius
 $btn-br: 3px; // Button border-radius
 $padding: $bfs; // Padding and margins
 $line-height: 44px; // Consistent height for buttons, inputs etc.
@@ -68,8 +68,8 @@ $orange: #db8301;
 $orange-light: lighten($orange, 10%);
 $red: #871e0a;
 $blue-electric: #0098fe;
-$blue-dim: #305f9c;
-$blue-dark: #102034;
+$blue-dim: #03090a;
+$blue-dark: #0C2830; // rgb(12, 40, 48)
 
 
 

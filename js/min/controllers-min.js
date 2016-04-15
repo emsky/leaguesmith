@@ -1,0 +1,1 @@
+var leagueSmith=angular.module("leagueSmith",["ngAnimate"]).controller("aboutController",["$scope",function(l){l.hello=!1,l.firstLoad=!0,l.toggleStates=function(){l.hello=!l.hello,l.firstLoad=!1}}]);

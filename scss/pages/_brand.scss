@@ -2,13 +2,18 @@
 // Any brand-specific styles and mixins
 //**
 
-html, body {
+html {
   background-image: url("/img/backdrop.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-color: black;
   color: $gold-mid;
+
 }
+body {
+  background: rgba(12, 33, 36, 0.3);
+}
+
 .overlay-frame {
   height: 76px;
   width: 76px;
@@ -23,9 +28,16 @@ html, body {
   border: 1px solid $teal-dark;
   background-color: rgba(12, 33, 36, 0.3);
 }
+.bg-radial-nautical {
+  background: radial-gradient(ellipse farthest-corner at 50% 125%, darken($teal-dark, 1%) 0%, $forest 50%, $forest-dark 75%, $forest-dark 100%);
+}
 .border-golden {
   border: 1px solid transparent;
   border-image: linear-gradient($gold-dark, $gold-mid, $gold-pale, white ,$gold-mid) 14% stretch;
+}
+.border-teal {
+  border: 1px solid transparent;
+  border-image: linear-gradient($forest, teal, teal ,$forest) 14% stretch;
 }
 
 [class^="frame-"]{
@@ -86,29 +98,45 @@ html, body {
  * Custom Buttons
  */
 .btn-redo,
-.btn-get {
+.btn-get,
+.btn-clear {
   @extend .border-golden;
  font-family: $serif;
- font-weight: 700;
+ font-weight: 400 ;
  text-shadow: 1px 1px 3px #000;
  padding-left: 1.5em;
  padding-right: 1.5em;
- transition: background-color 1s linear;
+ transition: all 0.25s linear;
 }
-.btn-redo {
-  background: linear-gradient(to bottom, $teal-dark, $forest);
+.btn-clear {
+  @extend .border-teal;
+}
+.btn-redo, .btn-clear {
+  background: radial-gradient(ellipse farthest-corner at 50% 0, $teal-dark 0%, $forest 50%, $forest-dark 100%);
   color: $gold-pale;
+  box-shadow: 0 1px 4px black;
 }
-.btn-redo:hover {
-  background: linear-gradient(to bottom, lighten($teal-dark, 5%), $forest);
+.btn-redo:hover,
+.btn-redo:active,
+.btn-redo:target,
+.btn-redo:focus,
+.btn-clear:hover,
+.btn-clear:active,
+.btn-clear:target,
+.btn-clear:focus {
+  background: radial-gradient(ellipse farthest-corner at 50% 0, lighten($teal-dark, 10%) 0%, $forest 75%, $forest-dark 100%);;
 }
 .btn-get {
   background: linear-gradient(to bottom, $red, $orange, $orange-light);
   color: $gold-pale;
 }
-.btn-get:hover {
+.btn-get:hover,
+.btn-get:active,
+.btn-get:target,
+.btn-get:focus {
   background: linear-gradient(to bottom, lighten($red, 10%), lighten($orange, 10%), $orange-light);
 }
+
 
 // Responsive styles if needed
 // @include responsive($big-break) {

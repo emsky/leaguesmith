@@ -1,49 +1,48 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html> <!--<![endif]-->
+<html ng-app="leagueSmith"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title></title> 
+	<title></title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/main.css">
-	<script type="txt/javascript" src="js/min/main.min.js"></script>
-	<script type="txt/javascript" src="js/min/controllers.min.js"></script>
-
 	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 </head>
-<body>
+<body ng-controller="aboutController">
 
 	<header role="banner">
 		<div class="container">
 			<div class="group">
 				<div class="title span8">
 					<img src="img/lol-logo.png" alt="">
-					<h1>League Crafter</h1>
+					<h1>LeagueSmith </h1>
+					<span><sup><a href="http://www.lolking.net/summoner/na/20519084">by Emsky</a></sup></span>
 				</div>
 				<nav class="span4 nav__buttons" role="navigation">
 					<ul>
-						<li class="nav__buttons__item"><a href="">About</a></li>
+						<li class="nav__buttons__item">
+							<a href="" ng-click="toggleStates()" ng-class="{active:hello}">About  &nbsp;&nbsp;<i class="icon icon-chevron-down" aria-hidden="true" ng-class="{'icon-flip-vertical':hello}"></i></a>
+						</li>
 					</ul>
 				</nav>
 			</div>
-
 		</div>
 	</header>
 	<main role="main">
-		<div class="smr container">
-				<div class="instructions">
-					<p>A simple Masteries and Runes calculator for planning strategies in League of Legends.</p>
-						<p>To use the Mastery calculator, just click the item to which you'd like to add points. Right-click on it to remove points. Or be a ninja and scroll.</p>
-						<p>To use the Rune calculator, simply drag a rune from your rune collection to an appropriate slot, or click the rune itself. Right-click a rune on the rune page to remove it and place it back to your rune pool.</p>
-				</div>
+		<div class="smr container" >
 
-
+			<div class="instructions center-horizontal" ng-class="{show:hello, hide:!hello, cloaked:firstLoad}">
+					<p>LeagueSmith is a simple Masteries and Runes calculator for planning strategies in League of Legends.</p>
+					<p><strong>To use the Mastery calculator</strong>: Click the item to which you'd like to add points. Right-click it to remove points. </p>
+					<p><strong>To use the Rune calculator</strong>: Drag a rune from your rune collection to an appropriate slot, or click the rune itself. Right-click a rune on the rune page to remove it and place it back to your rune pool.</p>
+			</div>
 				<div class="clearfix"></div>
-				<div class="group">
+				<div class="calculator group">
+
 						<div class="stats nautical span3">
 						<!--Champion Summary-->
 						<div class="champion-info">
@@ -143,7 +142,7 @@
 						<div class="masteries-runes span9">
 							<nav class="group">
 								<ul class="tabs span6">
-									<li class="tab"><a class="active tab-link tab-nautical">Masteries</a></li>
+									<li class="tab active"><a class="tab-link tab-nautical">Masteries</a></li>
 									<li class="tab"><a class="tab-link tab-nautical">Runes</a></li>
 									<li class="tab"><a class="tab-link tab-nautical">Other Stats</a></li>
 								</ul>
@@ -155,7 +154,7 @@
 							</nav>
 
 							<!-- Masteries -->
-							<div class="masteries">
+							<div class="masteries center-horizontal">
 									<div class="group">
 										  <!-- FEROCITY TREE -->
 											<div class="tree ferocity span4">
@@ -247,6 +246,9 @@
 																<span class="frame-tier6f-right"></span>
 															</a>
 														</div>
+													</div>
+													<div class="group">
+														<h3 class="tree-title center-horizontal">Ferocity</h3>
 													</div>
 											</div>
 
@@ -346,6 +348,9 @@
 															</a>
 														</div>
 												</div>
+												<div class="group">
+													<h3 class="tree-title center-horizontal">Cunning</h3>
+												</div>
 											</div>
 
 											<!-- RESOLVE TREE -->
@@ -422,25 +427,33 @@
 															</a>
 														</div>
 												</div>
-													<div class="group">
-												<div class="tier6 span4">
-													<a class="micon-graspoftheundying flush-left">
-														<span class="frame-tier6r-left"></span>
-													</a>
+												<div class="group">
+													<div class="tier6 span4">
+														<a class="micon-graspoftheundying flush-left">
+															<span class="frame-tier6r-left"></span>
+														</a>
+													</div>
+													<div class="tier6 span4">
+														<a class="micon-strengthoftheages">
+															<span class="frame-tier6r-center">	</span>
+														</a>
+													</div>
+													<div class="tier6 span4">
+															<a class="micon-bondofstone flush-right">
+																<span class="frame-tier6r-right"></span>
+															</a>
+													</div>
 												</div>
-												<div class="tier6 span4">
-													<a class="micon-strengthoftheages">
-														<span class="frame-tier6r-center">	</span>
-													</a>
+												<div class="group">
+													<h3 class="tree-title center-horizontal">Resolve</h3>
 												</div>
-												<div class="tier6 span4">
-													<a class="micon-bondofstone flush-right">
-														<span class="frame-tier6r-right"></span>
-													</a>
-												</div>
-											</div>
 											</div>
 									</div>
+
+									<div class="container">
+										<button class="btn btn-clear center-horizontal">Return Points</button>
+									</div>
+
 							</div>
 
 							<!-- Runes -->
@@ -468,10 +481,15 @@
 		<div class="container"></div>
 	</footer>
 
-	<script src="js/lib/jquery-1.10.1.min.js"></script>
-	<script src="js/lib/angular-min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
-	<script src="js/main.js"></script>
+
+  <script src="js/lib/jquery-min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+
+	  <!-- <script src="js/lib/angular-min.js"></script> -->
+	<script src="js/min/main-min.js"></script>
+	<script src="js/min/controllers-min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/lib/jquery-min.js"><\/script>')</script>
 
 </body>
 </html>
