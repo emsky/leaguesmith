@@ -2720,7 +2720,7 @@ header {
 /* Generated data URIs used for preview purposes only */
 /* Be sure that you replace data URIs with generated images */
 .icon-mastery {
-  background-image: url("/img/sprites.png");
+  background-image: url("../img/sprites.png");
   width: 35px;
   height: 40px;
   background-repeat: no-repeat; }
@@ -2896,13 +2896,13 @@ header {
   margin-left: 1.66667%; }
 
 .masteries .ferocity {
-  background-image: url("/img/bg-keystone-ferocity.png"); }
+  background-image: url("../img/bg-keystone-ferocity.png"); }
 
 .masteries .cunning {
-  background-image: url("/img/bg-keystone-cunning.png"); }
+  background-image: url("../img/bg-keystone-cunning.png"); }
 
 .masteries .resolve {
-  background-image: url("/img/bg-keystone-resolve.png"); }
+  background-image: url("../img/bg-keystone-resolve.png"); }
 
 .masteries > [class^="tier"] {
   display: table; }
@@ -2922,7 +2922,7 @@ header {
   height: 76px;
   width: 76px;
   display: block;
-  background: url("/img/micon.png");
+  background: url("../img/micon.png");
   background-position: center center;
   background-size: 57px 57px;
   background-repeat: no-repeat;
@@ -3001,7 +3001,7 @@ header {
   border-color: #efef00; }
 
 html {
-  background-image: url("/img/backdrop.jpg");
+  background-image: url("../img/backdrop.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-color: black;
@@ -3041,7 +3041,7 @@ body {
   display: inline-block;
   height: 76px;
   width: 76px;
-  background-image: url("/img/frames.png");
+  background-image: url("../img/frames.png");
   background-size: auto;
   position: absolute;
   z-index: 999; }

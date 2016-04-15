@@ -244,7 +244,7 @@ $icon-mastery-height: 40px;
 $icon-mastery-width: 35px;
 
 .icon-mastery {
-	background-image: url("/img/sprites.png");
+	background-image: url("../img/sprites.png");
   width: $icon-mastery-width;
   height: $icon-mastery-height;
   background-repeat: no-repeat;
@@ -433,13 +433,13 @@ $icon-mastery-width: 35px;
   margin-left: 1.66667%;
 }
 .masteries .ferocity {
-  background-image: url("/img/bg-keystone-ferocity.png")
+  background-image: url("../img/bg-keystone-ferocity.png")
 }
 .masteries .cunning {
-  background-image: url("/img/bg-keystone-cunning.png")
+  background-image: url("../img/bg-keystone-cunning.png")
 }
 .masteries .resolve {
-  background-image: url("/img/bg-keystone-resolve.png")
+  background-image: url("../img/bg-keystone-resolve.png")
 }
 .masteries>[class^="tier"] {
   display: table;
@@ -461,7 +461,7 @@ $icon-mastery-width: 35px;
    height: 76px;
    width: 76px;
    display: block;
-   background: url("/img/micon.png");
+   background: url("../img/micon.png");
    background-position: center center;
    background-size: 57px 57px;
    background-repeat: no-repeat;

@@ -3,7 +3,7 @@
 //**
 
 html {
-  background-image: url("/img/backdrop.jpg");
+  background-image: url("../img/backdrop.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-color: black;
@@ -44,7 +44,7 @@ body {
   display: inline-block;
   height: 76px;
   width: 76px;
-  background-image: url("/img/frames.png");
+  background-image: url("../img/frames.png");
   background-size: auto;
   position: absolute;
   z-index: 999;
