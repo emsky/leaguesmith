@@ -3,5 +3,5 @@ function writeMsg(){
   echo "Hello World!";
 }
 
-
+writeMsg();
 ?>
